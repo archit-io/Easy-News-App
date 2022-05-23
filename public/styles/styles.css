@@ -1,0 +1,15 @@
+#userDetails {
+    display: block;
+}
+
+#userDetails.deactivate {
+    display: none;
+}
+
+#otp {
+    display: none;
+}
+
+#otp.activate {
+    display: block;
+}

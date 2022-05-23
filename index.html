@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./public/styles/styles.css">
+    <title>ENA</title>
 </head>
 <body>
     <h1>Easy News App</h1>
     <p>Let's create your own news portal and share your ideas with the world.</p>
     <br>
-    <label for="countryCode">Enter your country code (eg +91): </label>
-    <input type="tel" name="countryCode"><br><br>
-    <label for="phoneNumber">Enter your phone number to receive the one time password: </label>
-    <input type="tel" name="phoneNumber"><br><br>
-    <span><a href="#">Let's create my news</a></span>
+    <form id="userDetails">
+        <label for="countryCode">Enter your country code (eg +91): </label>
+        <input type="tel" name="countryCode" id="countryCode"><br><br>
+        <label for="phoneNumber">Enter your phone number to receive the one time password: </label>
+        <input type="tel" name="phoneNumber" id="phoneNumber"><br><br>
+        <span><a href="#" id="submitUserDetails">Take me to my news creation page</a></span>
+    </form>
+    <form id="otp">
+        <label for="subOtp">Enter the one time password/code received on your phone: </label><br><br>
+        <input type="number" placeholder="Enter the code here..." id="subOtp"><br><br>
+        <span><a href="#" id="submitOtp">Click here after you enter the code above</a></span>
+    </form>
+
+    <!-- Add a container for reCaptcha -->
+    <div id="recaptcha-container"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-firestore.js"></script>    
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>
